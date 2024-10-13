@@ -1,5 +1,12 @@
+/*
+Author: Sneha Thomas
+KUID: 3124266
+Lab: 05
+Lab Session: 1pm Friday
+Purpose: sales-report
+*/
+
 #include <stdio.h>
-#include <string.h>
 
 void monthly(float list[]){
     float min = list[0];
