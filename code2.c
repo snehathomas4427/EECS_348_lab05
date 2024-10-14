@@ -26,19 +26,25 @@ void addMatrices(int m1[SIZE][SIZE], int m2[SIZE][SIZE]){
         }
     }
     //prints the matrix
-    printf("Sum of matricies: \n");
+    printf("Sum of matrices: \n");
     printMatrix(array);
 }
 
 void multiplyMatrices(int m1[SIZE][SIZE], int m2[SIZE][SIZE]){
     int array[5][5] = {0}; // Initialize a new matrix to store the product
-    for(int i = 0; i < 5; i++){
-        for (int j = 0; j < 5; j++) {
-            array[i][j] = m1[i][j] * m2[i][j];
+
+    for(int i = 0; i < 5; i++){ //row
+        for (int j = 0; j < 5; j++) { //col
+            int sum = 0;
+            for (int k = 0; k<5; k++){
+                sum += m1[i][k] * m2[k][j]; 
+            }
+            array[i][j] = sum;
         }
     }
+
     //prints the matrix
-    printf("Product of matricies: \n");
+    printf("Product of matrices: \n");
     printMatrix(array);
 }
 
